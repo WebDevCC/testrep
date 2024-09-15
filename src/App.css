@@ -1,38 +1,40 @@
-.App {
-  text-align: center;
+/* Additional styling for the intro section */
+.intro-section {
+  background-color: var(--nextui-colors-background);
+  color: var(--nextui-colors-text);
+  padding: 2rem;
+}
+/* Additional styling for the about us section */
+.about-us-section {
+  background-color: var(--nextui-colors-background);
+  color: var(--nextui-colors-text);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.text-primary {
+  color: var(--nextui-colors-primary);
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Add this to your CSS */
+.navbar-content {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.navbar-content .theme-switcher {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
 }
+/**
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+
+
+
+
+
+
+
+
+
+
+**/
