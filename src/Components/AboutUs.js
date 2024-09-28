@@ -1,10 +1,10 @@
 // app/Components/AboutUs.js
-import React from 'react';
+import React, { forwardRef } from 'react';
 import { Button } from '@nextui-org/react';
 
 const AboutUs = () => {
   return (
-    <section className="about-us-section flex flex-col justify-center items-center text-center py-16 px-4">
+    <section id="about-us" className="about-us-section flex flex-col justify-center items-center text-center py-16 px-4">
       <h1 className="text-5xl font-bold text-primary mb-6">
         About Us
       </h1>

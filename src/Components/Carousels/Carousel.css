@@ -48,13 +48,3 @@
     transform: rotate(1turn);
   }
 }
-
-
-html[data-theme='light'] .carousel-item {
-  background: var(--carousel-bg);
-  color: var(--carousel-text);
-}
-
-html[data-theme='light'] .carousel-item::before {
-  background-image: var(--carousel-border);
-}

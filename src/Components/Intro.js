@@ -2,13 +2,13 @@ import React from "react";
 import { Button } from "flowbite-react";
 import Carousel from "./Carousels/Carousel";
 import FancyText from '@carefully-coded/react-text-gradient';
-import { LinearGradient } from 'react-text-gradients'
+import { LinearGradient } from 'react-text-gradients';
 
 const Intro = () => {
+
   return (
     <section className="intro-section flex flex-col justify-center items-center h-screen text-center">
-
-      <FancyText className="text-6xl font-bold text-primary"
+<FancyText className="text-6xl font-bold text-primary"
       gradient={{ from: '#F858E0', to: '#77156C', type: 'linear' }}
       animateTo={{ from: '#6DEDD0', to: '#7AE23A' }}
       animateDuration={2000}

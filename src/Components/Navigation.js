@@ -11,8 +11,8 @@ import {
   Link,
 } from "@nextui-org/react";
 import { useTheme } from "next-themes"; 
-import ThemeSwitcher from "./Themes/ThemeSwitcher";
-import Providers from "./Themes/Provider";
+
+import logo from '../Images/logo.png'
 
 
 
@@ -20,6 +20,12 @@ const Navigation = () => {
     
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
   const { theme } = useTheme(); 
+  const handleScrollTo = (id) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
 
   const menuItems = [
     "Profile",
@@ -35,7 +41,7 @@ const Navigation = () => {
   ];
 
   return (
-    <Providers>
+
       <Navbar className={theme === "dark" ? "dark amoled" : ""} onMenuOpenChange={setIsMenuOpen} shouldHideOnScroll>
         <NavbarContent>
           
@@ -44,27 +50,31 @@ const Navigation = () => {
             className="sm:hidden" 
           />
           <NavbarBrand>
-            <p className="font-bold text-inherit">ACME</p>
+            <p className="font-bold text-inherit">WEBDEVCC</p>
           </NavbarBrand>
         </NavbarContent>
 
         <NavbarContent className="hidden sm:flex gap-4" justify="center">
-          <NavbarItem>
-            <Link color="foreground" href="/">
+        <NavbarItem>
+            <button onClick={() => handleScrollTo("intro")} className="text-foreground">
               Home
-            </Link>
+            </button>
           </NavbarItem>
           <NavbarItem>
-            <Link color="foreground" href="/about">
+            <button onClick={() => handleScrollTo("about-us")} className="text-foreground">
               About Us
-            </Link>
+            </button>
           </NavbarItem>
-          {/* Add more items as needed */}
+          <NavbarItem>
+            <button onClick={() => handleScrollTo("reasons")} className="text-foreground">
+              Presence
+            </button>
+          </NavbarItem>
         </NavbarContent>
 
         <NavbarContent justify="end">
           <NavbarItem className="hidden lg:flex">
-          <ThemeSwitcher />
+
           </NavbarItem>
         </NavbarContent>
 
@@ -89,7 +99,7 @@ const Navigation = () => {
           ))}
         </NavbarMenu>
       </Navbar>
-    </Providers>
+
   );
 };
 
